@@ -4,4 +4,4 @@ Abstraction
 Encapsulation
 
 
-Inheritance- allows child class to inherit attributes (properties) and behaviour (metnods) of a parent class 
+Inheritance- allows a child class to inherit attributes (properties) and behavior (methods) of a parent class 
