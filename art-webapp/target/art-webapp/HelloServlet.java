@@ -1,4 +1,4 @@
-package main.java.com.art;
+package com.art;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
