@@ -21,7 +21,7 @@
 
   <servlet-mapping>
   <servlet-name>ArtGalleryUser</servlet-name>
-  <url-pattern>/Hello</url-pattern>
+  <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   <servlet-name>ArtGalleryUser</servlet-name>
