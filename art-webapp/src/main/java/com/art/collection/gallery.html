@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flora Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* Basic structure for the carousel */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image {
+    cursor: pointer;
+}
+
+/* Styling for the modal and image carousel */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.mySlides {
+    display: none;
+    max-width: 800px;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flora Art Gallery</h1>
+    </header>
+    
+    <div class="gallery">
+        <!-- Image Thumbnails -->
+        <div class="image" onclick="currentSlide(1)">
+            <img src="Focus.JPG" alt="Photo 1">
+        </div>
+        <div class="image" onclick="currentSlide(2)">
+            <img src="Poly.JPG" alt="Photo 2">
+        </div>
+        <div class="image" onclick="currentSlide(3)">
+            <img src="midair.JPG" alt="Photo 3">
+        </div>
+        <div class="image" onclick="currentSlide(4)">
+            <img src="limuru.JPG" alt="Photo 4">
+        </div>
+        <div class="image" onclick="currentSlide(5)">
+            <img src="PrettyFeet.JPG" alt="Photo 5">
+        </div>
+        <div class="image" onclick="currentSlide(6)">
+            <img src="contrast.jpg" alt="Photo 6">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Image Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <!-- Image Carousel -->
+            <div class="mySlides fade">
+                <img src="Focus.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Poly.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="midair.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="limuru.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="PrettyFeet.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="contrast.jpg" style="width:100%">
+            </div>
+            <!-- Add more slides corresponding to each image -->
+        </div>
+    </div>
+
+   <script src="script.js">
+        // Modal scripts
+let slideIndex = 1;
+
+function openModal() {
+    document.getElementById('myModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName('mySlides');
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[slideIndex - 1].style.display = 'block';
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Close the modal when clicking outside the image modal
+window.onclick = function(event) {
+    let modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+ // Function to handle the login process
+ document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // Simulate login check using hard-coded credentials
+            if (username === "Kwako" && password === "76543") {
+                // Redirect to the gallery page after successful login
+                window.location.href = "gallery.html";
+            } else {
+                // Show an alert for invalid credentials
+                alert("Invalid username or password");
+            }
+        });
+    </script>
+
+</body>
+</html>

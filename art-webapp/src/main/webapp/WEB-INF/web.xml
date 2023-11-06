@@ -10,23 +10,6 @@
     <param-value>Art Gallery Web Application</param-value>
   </context-param>
 
-  <servlet>
-  <servlet-name>ArtGallery</servlet-name>
-  <servlet-class>com.art.Hello</servlet-class>
-  </servlet>
-  <servlet>
-  <servlet-name>ArtGallery</servlet-name>
-  <servlet-class>com.art.HelloGeneric</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-  <servlet-name>ArtGalleryUser</servlet-name>
-  <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  <servlet-name>ArtGalleryUser</servlet-name>
-  <url-pattern>/artsy</url-pattern>
-  </servlet-mapping>
-
+ 
 
 </web-app>

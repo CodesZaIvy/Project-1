@@ -1,7 +1,14 @@
-com\art\HelloGeneric.class
+com\art\auth\LogoutServlet.class
+com\art\parties\entity\Account.class
 com\art\Sculptures.class
-com\art\Photographs.class
-com\art\Paintings.class
+com\art\parties\entity\User.class
+com\art\database\database\Database.class
+com\art\auth\LoginServlet.class
 com\art\Hello.class
 com\art\Art.class
+com\art\Hallo.class
+com\art\HelloGeneric.class
+com\art\Photographs.class
+com\art\Paintings.class
 com\art\Main.class
+com\art\auth\UserDatabase.class

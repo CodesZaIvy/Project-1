@@ -4,8 +4,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+
+@WebServlet("/hello")
 
 public class Hello implements Servlet {
+
+
 
     @Override
     public void destroy() {
